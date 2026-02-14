@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applied Gen AI — Shareable Demo Site</title>
+    <meta name="description" content="A clean, shareable website for Applied Gen AI projects." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">Applied Gen AI</div>
+        <a class="btn btn-small" href="#contact">Get in touch</a>
+      </nav>
+      <div class="hero-content">
+        <h1>Build, Ship, and Share AI Experiences</h1>
+        <p>
+          This is your public landing page. Customize it and share it with anyone
+          using a single link.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="#projects">See projects</a>
+          <a class="btn btn-secondary" href="#about">Learn more</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="projects" class="section">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>AI Chatbot Demo</h3>
+            <p>Interactive conversational assistant powered by modern LLMs.</p>
+          </article>
+          <article class="card">
+            <h3>Prompt Engineering Lab</h3>
+            <p>Experiment with prompts and compare model responses quickly.</p>
+          </article>
+          <article class="card">
+            <h3>Workflow Automation</h3>
+            <p>Connect AI outputs to repeatable, production-ready workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section section-alt">
+        <h2>About</h2>
+        <p>
+          This site is intentionally simple and fast so it can be deployed easily
+          on GitHub Pages and shared with clients, teammates, or friends.
+        </p>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form class="contact-form" onsubmit="event.preventDefault(); showSuccess();">
+          <label>
+            Name
+            <input type="text" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Message
+            <textarea rows="4" placeholder="How can we help?" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send message</button>
+          <p id="success" aria-live="polite" class="success-msg" hidden>
+            Thanks! Your message was captured locally for this demo.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>© <span id="year"></span> Applied Gen AI</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
