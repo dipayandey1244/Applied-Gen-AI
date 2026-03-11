@@ -3,81 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Applied Gen AI — Shareable Demo Site</title>
-    <meta name="description" content="A clean, shareable website for Applied Gen AI projects." />
+    <title>ImageNet Learning Roadmap</title>
+    <meta
+      name="description"
+      content="A step-by-step repository and website to help you understand ImageNet from basics to modern practice."
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="hero">
       <nav class="nav">
-        <div class="brand">Applied Gen AI</div>
-        <a class="btn btn-small" href="#contact">Get in touch</a>
+        <div class="brand">ImageNet Step-by-Step</div>
+        <a class="btn btn-small" href="#resources">Start Learning</a>
       </nav>
       <div class="hero-content">
-        <h1>Build, Ship, and Share AI Experiences</h1>
+        <h1>Build Deep Understanding of ImageNet, One Step at a Time</h1>
         <p>
-          This is your public landing page. Customize it and share it with anyone
-          using a single link.
+          This repo is designed as a practical learning path: what ImageNet is,
+          why it matters, how models are trained on it, and how to experiment
+          with the ideas yourself.
         </p>
         <div class="cta-row">
-          <a class="btn" href="#projects">See projects</a>
-          <a class="btn btn-secondary" href="#about">Learn more</a>
+          <a class="btn" href="#roadmap">See roadmap</a>
+          <a class="btn btn-secondary" href="#projects">Hands-on projects</a>
         </div>
       </div>
     </header>
 
     <main>
-      <section id="projects" class="section">
-        <h2>Featured Projects</h2>
+      <section id="roadmap" class="section">
+        <h2>Step-by-Step Roadmap</h2>
         <div class="grid">
           <article class="card">
-            <h3>AI Chatbot Demo</h3>
-            <p>Interactive conversational assistant powered by modern LLMs.</p>
+            <h3>1) Foundations</h3>
+            <p>Learn datasets, labels, train/validation split, and top-1/top-5 accuracy.</p>
           </article>
           <article class="card">
-            <h3>Prompt Engineering Lab</h3>
-            <p>Experiment with prompts and compare model responses quickly.</p>
+            <h3>2) Data + Preprocessing</h3>
+            <p>Explore image resizing, normalization, augmentation, and class imbalance.</p>
           </article>
           <article class="card">
-            <h3>Workflow Automation</h3>
-            <p>Connect AI outputs to repeatable, production-ready workflows.</p>
+            <h3>3) CNN Baselines</h3>
+            <p>Reproduce simple baselines, then compare AlexNet/ResNet style ideas.</p>
+          </article>
+          <article class="card">
+            <h3>4) Evaluation + Errors</h3>
+            <p>Inspect confusion patterns and failure cases to build real intuition.</p>
+          </article>
+          <article class="card">
+            <h3>5) Transfer Learning</h3>
+            <p>Use ImageNet-pretrained models for downstream tasks and measure gains.</p>
+          </article>
+          <article class="card">
+            <h3>6) Modern Context</h3>
+            <p>Connect ImageNet lessons to ViTs, multimodal models, and current best practices.</p>
           </article>
         </div>
       </section>
 
-      <section id="about" class="section section-alt">
-        <h2>About</h2>
-        <p>
-          This site is intentionally simple and fast so it can be deployed easily
-          on GitHub Pages and shared with clients, teammates, or friends.
-        </p>
+      <section id="projects" class="section section-alt">
+        <h2>Hands-on Learning Projects</h2>
+        <ul class="milestones">
+          <li>✅ Build a mini image classifier from scratch.</li>
+          <li>✅ Fine-tune a pretrained ImageNet model on your own dataset.</li>
+          <li>✅ Create an error analysis notebook with visual examples.</li>
+        </ul>
       </section>
 
-      <section id="contact" class="section">
-        <h2>Contact</h2>
+      <section id="resources" class="section">
+        <h2>Study Loop</h2>
+        <p>
+          For each step: <strong>Read → Implement → Evaluate → Reflect</strong>.
+          Keep short notes in this repo so your understanding compounds over time.
+        </p>
         <form class="contact-form" onsubmit="event.preventDefault(); showSuccess();">
           <label>
-            Name
-            <input type="text" placeholder="Your name" required />
+            What step are you on?
+            <input type="text" placeholder="e.g., Step 3: CNN Baselines" required />
           </label>
           <label>
-            Email
-            <input type="email" placeholder="you@example.com" required />
+            Next goal
+            <textarea rows="3" placeholder="Write your next experiment..." required></textarea>
           </label>
-          <label>
-            Message
-            <textarea rows="4" placeholder="How can we help?" required></textarea>
-          </label>
-          <button class="btn" type="submit">Send message</button>
+          <button class="btn" type="submit">Save learning checkpoint</button>
           <p id="success" aria-live="polite" class="success-msg" hidden>
-            Thanks! Your message was captured locally for this demo.
+            Nice progress! Your checkpoint is saved locally for this demo.
           </p>
         </form>
       </section>
     </main>
 
     <footer class="footer">
-      <small>© <span id="year"></span> Applied Gen AI</small>
+      <small>© <span id="year"></span> ImageNet Learning Repo</small>
     </footer>
 
     <script src="script.js"></script>

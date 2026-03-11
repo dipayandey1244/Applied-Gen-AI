@@ -86,6 +86,16 @@ p { color: var(--muted); }
 .btn-secondary { background: transparent; color: var(--text); border: 1px solid #475569; }
 .cta-row { display: flex; gap: 0.75rem; margin-top: 1rem; flex-wrap: wrap; }
 
+.milestones {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text);
+}
+
+.milestones li {
+  margin: 0.5rem 0;
+}
+
 .contact-form {
   display: grid;
   gap: 0.9rem;
